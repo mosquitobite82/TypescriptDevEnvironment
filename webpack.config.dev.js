@@ -19,7 +19,15 @@ let config = {
   module: {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" }
+        ]
+      }
     ]
   },
   plugins: [
@@ -27,7 +35,7 @@ let config = {
       title: 'Development',
       filename: 'index.html',
       inject: true
-    }),
+    })
   ],
   devServer: {
     contentBase: distFolder,

@@ -7,7 +7,10 @@
     "start": "webpack-dev-server --config webpack.config.dev.js --open",
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6"
+  },
   "devDependencies": {
     "@types/node": "^9.3.0",
     "@types/webpack": "3.8.2",
