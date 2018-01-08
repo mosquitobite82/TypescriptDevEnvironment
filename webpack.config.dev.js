@@ -18,16 +18,9 @@ let config = {
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: 'ts-loader' },
+      { test: /\.tsx?$/, use: 'ts-loader' },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      {
-        test: /\.scss$/,
-        use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" },
-          { loader: "sass-loader" }
-        ]
-      }
+      { test: /\.scss$/, use: [ 'style-loader' , 'css-loader', 'sass-loader']},
     ]
   },
   plugins: [
