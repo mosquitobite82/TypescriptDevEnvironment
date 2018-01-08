@@ -1,0 +1,22 @@
+{
+  "name": "typescriptwebpackmochatemplate",
+  "version": "1.0.0",
+  "description": "minimal typescript setup with webpack dev server and mocha testrunner",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "ts-loader": "3.2.0",
+    "typescript": "2.6.2",
+    "webpack": "3.10.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "typescript",
+    "mocha",
+    "webpack"
+  ],
+  "author": "Johannes Lindgren",
+  "license": "GPL-3.0"
+}
