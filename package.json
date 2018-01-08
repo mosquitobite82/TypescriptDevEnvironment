@@ -1,7 +1,7 @@
 {
   "name": "typescriptwebpackmochatemplate",
   "version": "1.0.0",
-  "description": "minimal typescript setup with webpack dev server and mocha testrunner",
+  "description": "minimal typescript setup with webpack dev server and mocha & chai test setup",
   "scripts": {
     "build": "node ./node_modules/webpack/bin/webpack --config webpack.config.dev.js",
     "start": "webpack-dev-server --config webpack.config.dev.js --open",
