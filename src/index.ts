@@ -1,2 +1,2 @@
 import './styles.scss';
-console.log('Hello Typescript!');
+export const hello = () => 'Hello World!';
