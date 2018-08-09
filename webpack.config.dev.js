@@ -7,6 +7,7 @@ const distFolder = path.join(rootPath, 'dist');
 const sourceFolder = path.join(rootPath, 'src');
 
 let config = {
+  mode: 'development',
   devtool: 'inline-source-map',
   entry: [ path.join(rootPath, 'src/index.ts') ],
   output: {
@@ -28,12 +29,14 @@ let config = {
       title: 'Development',
       filename: 'index.html',
       inject: true
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
     contentBase: distFolder,
     compress: true,
-    port: 9000
+    port: 9000,
+    hot: true
   }
 };
 
