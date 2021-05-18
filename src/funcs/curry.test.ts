@@ -1,6 +1,6 @@
 import {curry} from "./curry";
 import 'mocha';
-import {expectType, expectNumber} from '../../helpFuncs/testhelpfuncs';
+import {expectType, expectNumber} from '../../helpFuncs/testHelpFuncs';
 
 describe('curry', () => {
     function testFunc(a : any, b : any, c : any , d : any)
