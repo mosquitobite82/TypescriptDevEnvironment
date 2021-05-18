@@ -1,6 +1,6 @@
 import {assert} from 'chai';
 import {compose} from './compose';
-import {expectNumber} from '../../helpFuncs/testhelpfuncs';
+import {expectNumber} from '../../helpFuncs/testHelpFuncs';
 
 describe('compose', () => {
     const increment = (a : any) => a + 1;
