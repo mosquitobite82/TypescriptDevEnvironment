@@ -3,8 +3,8 @@ import {compose} from './compose';
 import {expectNumber} from '../../helpFuncs/testhelpfuncs';
 
 describe('compose', () => {
-    const increment = (a) => a + 1;
-    const double = (a) => a * 2;
+    const increment = (a : any) => a + 1;
+    const double = (a : any) => a * 2;
     const incrThenDouble = compose(double, increment);
     
     it('should return the result of function As result into function B', () => {

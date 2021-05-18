@@ -3,7 +3,7 @@ import 'mocha';
 import {expectType, expectNumber} from '../../helpFuncs/testhelpfuncs';
 
 describe('curry', () => {
-    function testFunc(a, b, c , d)
+    function testFunc(a : any, b : any, c : any , d : any)
     {
         return a + b + c + d;
     }
