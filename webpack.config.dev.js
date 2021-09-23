@@ -33,7 +33,11 @@ let config = {
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    contentBase: distFolder,
+    static: {
+      directory: distFolder,
+      serveIndex: true,
+      watch: true,
+    },
     compress: true,
     port: 9000,
     hot: true
