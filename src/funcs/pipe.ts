@@ -1,8 +1,8 @@
-type PipeFunc = <T, TResult>(x: T) => TResult;
+type PipeFunc = <T, U>(x: T) => U;
 
 interface Pipe<T> {
-  to: (func: PipeFunc) => Pipe<T>
-  apply: () => any
+  to: <T, U>(func: (x: T) => U) => Pipe<U>
+  apply: <U>() => U
 }
 
 export const pipe = <T>(x: T) => {
@@ -13,8 +13,8 @@ export const pipe = <T>(x: T) => {
 
   const pipeOf = <T>(funcs: PipeFunc[], x: T) => {
     const pipeObj: Pipe<T> = {
-      to: (func: PipeFunc) => {
-        return to(funcs, func);
+      to: <T, U>(func: (x: T) => U) => {
+        return to<T, U>(funcs, func as PipeFunc);
       },
       apply: () => {
         const first = funcs[0];

@@ -2,8 +2,9 @@ import { expect } from "chai";
 import { expectType } from "../../helpFuncs/testHelpFuncs";
 import { curry } from "./curry";
 import { pipe } from './pipe';
-const double = (x: any) => x * 2 as any;
+const double = (x: number) => x * 2;
 const add = curry((x: number, y: number) => x + y);
+const toString = (x: any) => `${x}`;
 
 describe('pipe', () => {
   it('should take any val', () => {
@@ -11,7 +12,8 @@ describe('pipe', () => {
     const result =
       ten
         .to(add(5))
-        .to(double);
+        .to(double)
+        .to(toString);
 
     expectType('object', result);
   });
@@ -34,10 +36,11 @@ describe('pipe object', () => {
     const result =
       pipe(3)
         .to(add(5))
-        .to((x) => (x as any / 4 as any))
+        .to((x: number) => x / 4)
+        .to(toString)
         .apply();
 
-    expect(result).to.equal(2);
+    expect(result).to.equal('2');
   });
 });
 
