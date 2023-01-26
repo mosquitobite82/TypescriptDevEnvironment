@@ -1,5 +1,6 @@
 // import {assert} from 'chai';
-// import {compose} from './compose';
+import { expect } from 'chai';
+import { compose } from './compose';
 // import {expectNumber} from '../../helpFuncs/testHelpFuncs';
 
 // describe('compose', () => {
@@ -18,3 +19,23 @@
 //         expectNumber(8, result);
 //     });
 // });
+
+describe('compose', () => {
+  const increment = (a: number) => a + 1;
+  const double = (a: number) => a * 2;
+  const toString = (x: number) => `${x}`;
+  const isEmpty = (x: string) => x === "";
+  const twice = (x: number) => x + x;
+
+  it('should return the result of function As result into function B', () => {
+    const doubleThenIncr =
+      compose(toString)
+        .to(isEmpty)
+        .to(toString)
+        .to(twice)
+        .apply();
+
+    const result = doubleThenIncr(5);
+    expect(result).to.equal('falsefalse');
+  });
+});

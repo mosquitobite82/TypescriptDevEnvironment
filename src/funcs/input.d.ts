@@ -1,0 +1,17 @@
+type Predicate<T> = (x: T) => boolean;
+export declare const not: (...argmnts: any[]) => any;
+export declare const pass: (...argmnts: any[]) => any;
+export declare const passAll: (...argmnts: any[]) => any;
+export declare const type: (...argmnts: any[]) => any;
+export declare const isBigInt: Predicate<any>;
+export declare const isBoolean: Predicate<any>;
+export declare const isFunction: Predicate<any>;
+export declare const isString: Predicate<any>;
+export declare const isSymbol: Predicate<any>;
+export declare const isUndefined: Predicate<any>;
+export declare const isArray: (arg: any) => arg is any[];
+export declare const isNull: (x: any) => boolean;
+export declare const isNumber: any;
+export declare const isObject: any;
+export declare const withinRange: (...argmnts: any[]) => any;
+export {};

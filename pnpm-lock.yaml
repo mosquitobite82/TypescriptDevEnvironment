@@ -4,12 +4,14 @@ specifiers:
   '@types/chai': ^4.3.4
   '@types/mocha': ^10.0.1
   '@types/node': ^15.14.9
+  '@types/ramda': ^0.28.22
   '@types/webpack': ^5.28.0
   chai: ^4.3.7
   css-loader: ^5.2.7
   html-webpack-plugin: ^5.5.0
   ignore-styles: ^5.0.1
   mocha: ^10.2.0
+  ramda: ^0.28.0
   sass: ^1.57.1
   sass-loader: ^11.1.1
   style-loader: ^2.0.0
@@ -20,10 +22,14 @@ specifiers:
   webpack-cli: ^4.10.0
   webpack-dev-server: ^4.11.1
 
+dependencies:
+  ramda: 0.28.0
+
 devDependencies:
   '@types/chai': 4.3.4
   '@types/mocha': 10.0.1
   '@types/node': 15.14.9
+  '@types/ramda': 0.28.22
   '@types/webpack': 5.28.0_webpack-cli@4.10.0
   chai: 4.3.7
   css-loader: 5.2.7_webpack@5.75.0
@@ -211,6 +217,12 @@ packages:
 
   /@types/qs/6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
+    dev: true
+
+  /@types/ramda/0.28.22:
+    resolution: {integrity: sha512-DoIfh0sBxrL/aqADk+SGrfjJT9cB8modg+4NRlF7/Tfg4N2+KBEkAgpYYzrjiZxxR5YzWizjfVrTEdVDwYK7xQ==}
+    dependencies:
+      ts-toolbelt: 6.15.5
     dev: true
 
   /@types/range-parser/1.2.4:
@@ -2121,6 +2133,10 @@ packages:
       side-channel: 1.0.4
     dev: true
 
+  /ramda/0.28.0:
+    resolution: {integrity: sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==}
+    dev: false
+
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
@@ -2649,6 +2665,10 @@ packages:
       typescript: 4.9.4
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+    dev: true
+
+  /ts-toolbelt/6.15.5:
+    resolution: {integrity: sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==}
     dev: true
 
   /tslib/2.4.1:

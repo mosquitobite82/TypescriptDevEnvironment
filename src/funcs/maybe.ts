@@ -1,4 +1,3 @@
-import { curry } from './curry';
 import { isNull, isUndefined } from './input';
 
 export interface Maybe<T> {
